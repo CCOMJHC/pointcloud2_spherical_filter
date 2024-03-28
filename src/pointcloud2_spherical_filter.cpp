@@ -116,8 +116,8 @@ int main(int argc, char **argv)
 
     ros::NodeHandle nh;
 
-    output_pub = nh.advertise<sensor_msgs::PointCloud2>("output",1);
-    ros::Subscriber input_sub = nh.subscribe("input", 1, &pc_callabck);
+    output_pub = nh.advertise<sensor_msgs::PointCloud2>("output", 25);
+    ros::Subscriber input_sub = nh.subscribe("input", 25, &pc_callabck);
     
     ros::spin();
     
